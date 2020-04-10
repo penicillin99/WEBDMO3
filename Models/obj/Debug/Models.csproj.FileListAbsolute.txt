@@ -1,0 +1,11 @@
+D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\Models.dll.config
+D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\Models.dll
+D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\Models.pdb
+D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\EntityFramework.dll
+D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\EntityFramework.xml
+D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\COMMON_WEB\WEBDMO3\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\COMMON_WEB\WEBDMO3\Models\obj\Debug\Models.csproj.CopyComplete
+D:\COMMON_WEB\WEBDMO3\Models\obj\Debug\Models.dll
+D:\COMMON_WEB\WEBDMO3\Models\obj\Debug\Models.pdb
