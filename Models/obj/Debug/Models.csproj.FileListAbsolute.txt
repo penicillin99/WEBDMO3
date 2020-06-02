@@ -5,7 +5,11 @@ D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\EntityFramework.dll
 D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\EntityFramework.SqlServer.dll
 D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\EntityFramework.xml
 D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\EntityFramework.SqlServer.xml
-D:\COMMON_WEB\WEBDMO3\Models\obj\Debug\Models.csprojAssemblyReference.cache
 D:\COMMON_WEB\WEBDMO3\Models\obj\Debug\Models.csproj.CopyComplete
 D:\COMMON_WEB\WEBDMO3\Models\obj\Debug\Models.dll
 D:\COMMON_WEB\WEBDMO3\Models\obj\Debug\Models.pdb
+D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\PagedList.dll
+D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\PagedList.Mvc.dll
+D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\PagedList.xml
+D:\COMMON_WEB\WEBDMO3\Models\bin\Debug\PagedList.Mvc.xml
+D:\COMMON_WEB\WEBDMO3\Models\obj\Debug\Models.csprojAssemblyReference.cache

@@ -44,6 +44,10 @@ namespace Models.EF
 
             modelBuilder.Entity<ROOM>()
                 .Property(e => e.address)
+                .IsUnicode(true);
+
+            modelBuilder.Entity<ROOM>()
+                .Property(e => e.acreage)
                 .IsUnicode(false);
 
             modelBuilder.Entity<TYPEROOM>()

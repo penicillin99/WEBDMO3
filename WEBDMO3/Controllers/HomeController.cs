@@ -1,30 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Models.EF;
 
 namespace WEBDMO3.Controllers
 {
     public class HomeController : Controller
     {
+        private WebDbContext db = new WebDbContext();
+
+        // GET: Home
         public ActionResult Index()
         {
-            return View();
+            var rOOMs = db.ROOMs.Include(r => r.EMPLOYER).Include(r => r.TYPEROOM);
+            return View(rOOMs.ToList());
         }
 
-        public ActionResult About()
+        // GET: Home/Details/5
+        public ActionResult Details(int? id)
         {
-            ViewBag.Message = "Your application description page.";
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ROOM rOOM = db.ROOMs.Find(id);
+            if (rOOM == null)
+            {
+                return HttpNotFound();
+            }
+            return View(rOOM);
+        }  
 
-            return View();
-        }
-
-        public ActionResult Contact()
+        protected override void Dispose(bool disposing)
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

@@ -83,3 +83,7 @@ D:\COMMON_WEB\WEBDMO3\WEBDMO3\obj\Debug\WEBDMO3.csprojAssemblyReference.cache
 D:\COMMON_WEB\WEBDMO3\WEBDMO3\bin\Models.dll
 D:\COMMON_WEB\WEBDMO3\WEBDMO3\bin\Models.pdb
 D:\COMMON_WEB\WEBDMO3\WEBDMO3\bin\Models.dll.config
+D:\COMMON_WEB\WEBDMO3\WEBDMO3\bin\PagedList.dll
+D:\COMMON_WEB\WEBDMO3\WEBDMO3\bin\PagedList.Mvc.dll
+D:\COMMON_WEB\WEBDMO3\WEBDMO3\bin\PagedList.xml
+D:\COMMON_WEB\WEBDMO3\WEBDMO3\bin\PagedList.Mvc.xml

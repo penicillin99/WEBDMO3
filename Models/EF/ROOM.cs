@@ -12,6 +12,10 @@ namespace Models.EF
         public int id { get; set; }
 
         [Required]
+        [StringLength(200)]
+        public string title { get; set; }
+
+        [Required]
         [StringLength(100)]
         public string address { get; set; }
 
@@ -28,13 +32,21 @@ namespace Models.EF
 
         public int personMax { get; set; }
 
-        public int acreage { get; set; }
+        [Required]
+        [StringLength(10)]
+        public string acreage { get; set; }
 
         public bool allowPet { get; set; }
 
         public int idEmployer { get; set; }
 
-        public int status { get; set; }
+        public bool status { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime createdate { get; set; }
+
+        [StringLength(50)]
+        public string cratedBy { get; set; }
 
         public virtual EMPLOYER EMPLOYER { get; set; }
 
