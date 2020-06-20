@@ -19,6 +19,9 @@ namespace Models.EF
         [StringLength(100)]
         public string address { get; set; }
 
+        [StringLength(200)]
+        public string image_link { get; set; }
+
         public int idRoom { get; set; }
 
         public int price { get; set; }
