@@ -16,12 +16,19 @@ namespace WEBDMO3.Areas.Admin.Controllers
         private WebDbContext db = new WebDbContext();
 
         // GET: Admin/Home
-        public ActionResult Index(string title, int page = 1, int pageSize = 10)
+        public ActionResult Index(string price,string location, string typeRoom, int page = 1, int pageSize = 10)
         {
             RoomDAO dao = new RoomDAO();
-            var model = dao.GetRoomByTitle(title, page, pageSize);
-            ViewBag.Title = title;
-
+            int price_int = 0;
+            if (!string.IsNullOrEmpty(price))
+            {
+                price_int = Convert.ToInt32(price);
+            }
+            
+            var model = dao.GetRoomByTitle(price_int, location,typeRoom,page, pageSize);
+            ViewBag.Price = price;
+            ViewBag.Location = location;
+            ViewBag.TypeRoom = typeRoom;
             return View(model);
         }
 

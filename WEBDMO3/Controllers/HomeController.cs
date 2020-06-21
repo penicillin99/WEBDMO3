@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Models.DAO;
 using Models.EF;
 
 namespace WEBDMO3.Controllers
@@ -15,10 +16,20 @@ namespace WEBDMO3.Controllers
         private WebDbContext db = new WebDbContext();
 
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(string price, string location, string typeRoom, int page = 1, int pageSize = 10)
         {
-            var rOOMs = db.ROOMs.Include(r => r.EMPLOYER).Include(r => r.TYPEROOM);
-            return View(rOOMs.ToList());
+            RoomDAO dao = new RoomDAO();
+            int price_int = 0;
+            if (!string.IsNullOrEmpty(price))
+            {
+                price_int = Convert.ToInt32(price);
+            }
+
+            var model = dao.GetRoomByTitle(price_int, location, typeRoom, page, pageSize);
+            ViewBag.Price = price;
+            ViewBag.Location = location;
+            ViewBag.TypeRoom = typeRoom;
+            return View(model);
         }
 
         // GET: Home/Details/5

@@ -1,4 +1,7 @@
-﻿@model IEnumerable<Models.EF.ROOM>
+﻿
+@model PagedList.IPagedList<Models.EF.ROOM>
+@using PagedList.Mvc
+
 
 @{
     ViewBag.Title = "Index";
@@ -10,50 +13,80 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+<div class="row" style="align-items:center; margin-bottom : 2%">
+    <div class="col-lg-2" style="margin-left:15%">
+        <input type="text" name="price" maxlength="10" value="@ViewBag.Price" placeholder="Giá phòng" />
+    </div>
+    <div class="col-lg-2" style="margin-left:2%">
+        <input type="text" name="location" maxlength="15" value="@ViewBag.Location" placeholder="Địa điểm" />
+    </div>
+    <div class="col-lg-2" style="margin-left:2%">
+        <input type="text" name="typeRoom"  value="@ViewBag.TypeRoom" placeholder="Loại phòng" />
+    </div>
+    <div class="col-lg-2">
+        <button type="submit" class="btn btn-info btn-sm">Tìm kiếm</button>
+    </div>
+    <div class="col-lg-4">
+
+    </div>
+</div>
+}
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.EMPLOYER.fullname)
+            Tên phòng
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TYPEROOM.name)
+           Loại phòng
         </th>
-       
+
         <th>
-            @Html.DisplayNameFor(model => model.price)
+            Giá
         </th>
-        
-        
         <th>
-            @Html.DisplayNameFor(model => model.status)
+            Địa điểm
         </th>
-        
+
+        <th>
+           Trạng thái
+        </th>
+
         <th>#</th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.EMPLOYER.fullname)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TYPEROOM.name)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.price)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.status)
-        </td>
-        
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMPLOYER.fullname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TYPEROOM.name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
 
 </table>
+<div class=row, style="margin-left:60px">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, @price = ViewBag.Price , @location = ViewBag.Location, @typeRoom = ViewBag.TypeRoom}))
+</div>

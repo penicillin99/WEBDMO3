@@ -1,12 +1,32 @@
 ﻿
 
-@model IEnumerable<Models.EF.ROOM>
+@model PagedList.IPagedList<Models.EF.ROOM>
+@using PagedList.Mvc
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    <div class="h_menu_2">
+        <ul>
+            <li><input type="text" name="price" maxlength="10" value="@ViewBag.Price" placeholder="Giá phòng" /></li>
+            <li><input type="text" name="location" maxlength="15" value="@ViewBag.Location" placeholder="Địa điểm" /></li>
+            <li><input type="text" name="typeRoom" value="@ViewBag.TypeRoom" placeholder="Loại phòng" /></li>
+
+            <li> <button type="submit" class="btn btn-info btn-sm">Tìm kiếm</button></li>
+        </ul>
+    </div>
+
+}
+
+
 <div class="grids_of_3 ">
+
     @foreach (var item in Model)
     {
         <div class="grid1_of_3 row ">
@@ -21,4 +41,8 @@
             </div>
         </div>
     }
+</div>
+
+<div class=row, style="margin-left:60px">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, @price = ViewBag.Price, @location = ViewBag.Location, @typeRoom = ViewBag.TypeRoom }))
 </div>

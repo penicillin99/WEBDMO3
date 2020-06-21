@@ -222,7 +222,17 @@ body {
 	color:#ffffff;
 	font-size: 18px;
 }
+.h_menu_2 {
+	padding-top: 5px;
+	text-align : center;
+	float: none;
+	color: #ffffff;
+	font-size: 18px;
+}
 .h_menu ul li{
+	display: inline-block;
+}
+.h_menu_2 ul li {
 	display: inline-block;
 }
 .h_menu ul li:first-child a{
@@ -232,6 +242,17 @@ body {
 	display: block;
 	padding: 14px 18px;
 	font-size: 1.2em;
+	text-transform: uppercase;
+	color: #ffffff;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.h_menu_2 ul li a {
+	display: block;
+	padding: 14px 18px;
+	font-size: 20px;
 	text-transform: uppercase;
 	color: #ffffff;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -429,7 +450,8 @@ body {
 }
 /* start main */
 .main_bg {
-	background-image: url("/Common/Images/img-bg2.jpg");
+	background-image: url("/Common/Images/bds.jpg");
+
 	min-height: 700px;
 	overflow: auto;
 	padding-bottom: 2%;
