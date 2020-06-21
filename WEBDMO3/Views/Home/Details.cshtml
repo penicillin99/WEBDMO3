@@ -5,135 +5,127 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>ROOM</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.EMPLOYER.fullname)
-        </dt>
+    <div class="detail">
+        <h4>Thông tin chi tiết</h4>
+        <hr />
+        <div class="row">
+            <div class="col-lg-offset-0 title-detail">
+                Chủ nhà :
+            </div>
+            <div class="col-lg-2 info-detail">
+                @Html.DisplayFor(model => model.EMPLOYER.fullname)
+            </div>
+            <div class="col-lg-offset-0 title-detail">
+                Loại phòng :
+            </div>
+            <div class="col-lg-3 info-detail">
+                @Html.DisplayFor(model => model.TYPEROOM.name)
+            </div>
+            <div class="col-lg-offset-0 title-detail">
+                Tên phòng :
+            </div>
+            <div class="col-lg-2 info-detail">
+                @Html.DisplayFor(model => model.title)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-offset-0 title-detail">
+                Địa chỉ : 
+            </div>
+            <div class="col-lg-2 info-detail" >
+                @Html.DisplayFor(model => model.address)
+            </div>
+            <div class="col-lg-2 title-detail">
+                   Giá phòng :
+            </div>
+            <div class="col-lg-1 info-detail">
+                @Html.DisplayFor(model => model.price)VNĐ
+            </div>
+        </div>
+        <div>
 
-        <dd>
-            @Html.DisplayFor(model => model.EMPLOYER.fullname)
-        </dd>
+            <dl class="dl-horizontal">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TYPEROOM.name)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TYPEROOM.name)
-        </dd>
+                
+                
+                <dt>
+                    @Html.DisplayNameFor(model => model.funcion_1)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.title)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.funcion_1)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.title)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.funcion_2)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.address)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.funcion_2)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.address)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.content)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.image_link)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.content)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.image_link)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.personMax)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.price)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.personMax)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.price)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.acreage)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.funcion_1)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.acreage)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.funcion_1)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.allowPet)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.funcion_2)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.allowPet)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.funcion_2)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.status)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.content)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.status)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.content)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.createdate)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.personMax)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.createdate)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.personMax)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.cratedBy)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.acreage)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.cratedBy)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.acreage)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.allowPet)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.allowPet)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.status)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.status)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.createdate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.createdate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.cratedBy)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.cratedBy)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>

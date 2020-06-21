@@ -462,14 +462,10 @@ body {
 	overflow : auto;
 }
 /* start grids_of_3 */
-.grids_of_3{
-	text-align:center;
-	margin: 4% 0;
-	overflow : auto;
-}
+
 .grid1_of_3{
 	float: left;
-	width: 26.5%;
+	width: 30%;
 	padding : 2%;
 	margin-right: 2%;
 	margin-top : 2%;
@@ -479,8 +475,24 @@ body {
 	position: relative;
 	background : #ffff99;
 }
+.title-room{
+	text-align:center;
+}
 .detail-room {
 	margin-top : 20px;
+	text-align:center;	
+}
+
+.title-detail{
+	margin-top : 10px;
+	margin-left: 15px;
+	font-weight: bold;
+}
+
+.info-detail{
+	margin-top : 10px;
+	margin-right : 30px;
+	text-align:center;
 }
 .grid1_of_3:first-child {
 	margin-left: 0;
@@ -499,6 +511,7 @@ body {
 .grid1_of_3 h3{
 	font-size: 1.8em;
 	color: #cc3300;
+	text-align:center;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -507,7 +520,21 @@ body {
 .grid1_of_3:hover h3,.grid1_of_3:hover h4 span{
 	color: rgb(24, 141, 118);
 }
-.b_btm{
+
+.detail {
+	
+	width: 90%;
+	
+	padding-top:4%;
+	padding-left : 7%;
+	margin-left : 5%;
+	margin-top: 2%;
+	border: 2px solid;
+	border-radius: 5%;
+	border-color: #009999;
+	background: #ffff99;
+}
+.b_btm {
 	position: absolute;
 	width: 100%;
 	border-bottom: 6px solid #3CC395;
@@ -519,6 +546,8 @@ body {
 .price h4{
 	font-size: 1.5em;
 	color: #999999;	
+	text-align:center;	
+	margin-top: 3%;
 }
 .price h4 span{
 	display: inline-block;
