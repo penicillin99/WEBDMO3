@@ -1,9 +1,7 @@
-﻿
-@model PagedList.IPagedList<Models.EF.ROOM>
-@using PagedList.Mvc
-
+﻿@model IEnumerable<Models.EF.ROOM>
 
 @{
+    ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,68 +10,50 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
-
-@using (Html.BeginForm("Index", "HOME", FormMethod.Get))
-{
-    <div class="row">
-        <div class="col-lg-offset-1" style="margin-left:15px">
-            Trạng thái thuê
-        </div>
-        <div class="col-lg-2" style="margin-bottom:10px">
-            <input type="text" name="title" value="@ViewBag.Title" />
-        </div>
-        <div class="col-lg-2" style="margin-bottom:15px">
-            <button type="submit" class="btn btn-info btn-sm">Tìm kiếm</button>
-        </div>
-        <div class="col-lg-6">
-
-        </div>
-    </div>
-}
-
-
-
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EMPLOYER.fullname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TYPEROOM.name)
+        </th>
        
         <th>
-          Tiêu đề
+            @Html.DisplayNameFor(model => model.price)
         </th>
+        
+        
         <th>
-          Địa chỉ
+            @Html.DisplayNameFor(model => model.status)
         </th>
-        <th>
-         Giá
-        </th>
-      
+        
         <th>#</th>
     </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-           
-            <td>
-                @Html.DisplayFor(modelItem => item.title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.price)
-            </td>
-          
-            <td>
-                @Html.ActionLink("Sửa", "Edit", new { id = item.id }) |
-                @Html.ActionLink("Xem", "Details", new { id = item.id }) |
-                @Html.ActionLink("Xóa", "Delete", new { id = item.id })
-            </td>
-        </tr>
-    }
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMPLOYER.fullname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TYPEROOM.name)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
 
 </table>
-
-<div class=row, style="margin-left:60px">
-    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, @title = ViewBag.Title }))
-</div>

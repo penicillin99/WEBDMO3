@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Models.EF.ROOM>
+﻿
+
+@model IEnumerable<Models.EF.ROOM>
 
 @{
     ViewBag.Title = "Index";
@@ -7,16 +9,16 @@
 <div class="grids_of_3 ">
     @foreach (var item in Model)
     {
-    <div class="grid1_of_3 row ">
-        <div class="col-lg-1">
-            <h3> @Html.DisplayFor(modelItem => item.title)</h3>
-            <img src="~/Common/Images/img_common.jpg" alt="" />
-            <div class="price">
-                <h4>Giá :@Html.DisplayFor(modelItem => item.price) VNĐ </h4>
-                <h4>Địa chỉ : @Html.DisplayFor(modelItem => item.address) </h4>
-                <div class="detail-room">@Html.ActionLink("Chi tiết", "Details", new { id = item.id })</div>
+        <div class="grid1_of_3 row ">
+            <div class="col-lg-1">
+                <h3> @Html.DisplayFor(modelItem => item.title)</h3>
+                <img src="~/Common/Images/img_common.jpg" alt="" />
+                <div class="price">
+                    <h4>Giá :@Html.DisplayFor(modelItem => item.price) VNĐ </h4>
+                    <h4>Địa chỉ : @Html.DisplayFor(modelItem => item.address) </h4>
+                    <div class="detail-room">@Html.ActionLink("Chi tiết", "Details", new { id = item.id })</div>
+                </div>
             </div>
         </div>
-    </div>
     }
 </div>

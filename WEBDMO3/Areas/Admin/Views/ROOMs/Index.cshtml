@@ -1,0 +1,118 @@
+﻿@model IEnumerable<Models.EF.ROOM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EMPLOYER.fullname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TYPEROOM.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.image_link)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.funcion_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.funcion_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.personMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.acreage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.allowPet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.createdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cratedBy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMPLOYER.fullname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TYPEROOM.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.image_link)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.funcion_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.funcion_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.content)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.personMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.acreage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.allowPet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cratedBy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

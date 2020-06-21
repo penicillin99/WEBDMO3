@@ -19,11 +19,13 @@ namespace WEBDMO3.Areas.Admin.Controllers
         public ActionResult Index(string title, int page = 1, int pageSize = 10)
         {
             RoomDAO dao = new RoomDAO();
-            var model =  dao.GetRoomByTitle(title, page, pageSize);
+            var model = dao.GetRoomByTitle(title, page, pageSize);
             ViewBag.Title = title;
 
             return View(model);
         }
+
+
 
         // GET: Admin/Home/Details/5
         public ActionResult Details(int? id)
@@ -53,7 +55,7 @@ namespace WEBDMO3.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,title,address,idRoom,price,funcion_1,funcion_2,content,personMax,acreage,allowPet,idEmployer,status,createdate,cratedBy")] ROOM rOOM)
+        public ActionResult Create([Bind(Include = "id,title,address,image_link,idRoom,price,funcion_1,funcion_2,content,personMax,acreage,allowPet,idEmployer,status,createdate,cratedBy")] ROOM rOOM)
         {
             if (ModelState.IsValid)
             {
@@ -89,7 +91,7 @@ namespace WEBDMO3.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,title,address,idRoom,price,funcion_1,funcion_2,content,personMax,acreage,allowPet,idEmployer,status,createdate,cratedBy")] ROOM rOOM)
+        public ActionResult Edit([Bind(Include = "id,title,address,image_link,idRoom,price,funcion_1,funcion_2,content,personMax,acreage,allowPet,idEmployer,status,createdate,cratedBy")] ROOM rOOM)
         {
             if (ModelState.IsValid)
             {

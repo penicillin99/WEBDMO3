@@ -24,7 +24,6 @@ D:\GIT_WEB\WEBDMO3\Models\bin\Debug\EntityFramework.xml
 D:\GIT_WEB\WEBDMO3\Models\bin\Debug\EntityFramework.SqlServer.xml
 D:\GIT_WEB\WEBDMO3\Models\bin\Debug\PagedList.xml
 D:\GIT_WEB\WEBDMO3\Models\bin\Debug\PagedList.Mvc.xml
-D:\GIT_WEB\WEBDMO3\Models\obj\Debug\Models.csprojAssemblyReference.cache
 D:\GIT_WEB\WEBDMO3\Models\obj\Debug\Models.csproj.CopyComplete
 D:\GIT_WEB\WEBDMO3\Models\obj\Debug\Models.dll
 D:\GIT_WEB\WEBDMO3\Models\obj\Debug\Models.pdb

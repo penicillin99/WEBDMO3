@@ -2169,16 +2169,21 @@
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Menu.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Layout\fonts\Amble-Regular-webfont.ttf" />
     <Content Include="Layout\fonts\BebasNeue-webfont.ttf" />
     <Content Include="Layout\images\large\Thumbs.db" />
     <Content Include="Layout\images\small\Thumbs.db" />
     <Content Include="Layout\images\Thumbs.db" />
+    <Content Include="Areas\Admin\Views\ROOMs\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ROOMs\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ROOMs\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ROOMs\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ROOMs\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2201,7 +2206,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Delete.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
