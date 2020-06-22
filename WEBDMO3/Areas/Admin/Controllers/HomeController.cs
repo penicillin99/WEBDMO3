@@ -61,7 +61,9 @@ namespace WEBDMO3.Areas.Admin.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
+       
         public ActionResult Create([Bind(Include = "id,title,address,image_link,idRoom,price,funcion_1,funcion_2,content,personMax,acreage,allowPet,idEmployer,status,createdate,cratedBy")] ROOM rOOM)
         {
             if (ModelState.IsValid)

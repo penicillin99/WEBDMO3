@@ -80,8 +80,13 @@
         <div class="form-group">
             @Html.LabelFor(model => model.content, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.content, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => model.content, new { @id = "ckeContent" })
                 @Html.ValidationMessageFor(model => model.content, "", new { @class = "text-danger" })
+                <script type="text/javascript">
+
+                    CKEDITOR.replace("ckeContent");
+
+                </script>
             </div>
         </div>
 
