@@ -530,7 +530,7 @@ body {
 	margin-left : 5%;
 	margin-top: 2%;
 	border: 2px solid;
-	border-radius: 5%;
+	border-radius: 20px;
 	border-color: #009999;
 	background: #ffff99;
 }
