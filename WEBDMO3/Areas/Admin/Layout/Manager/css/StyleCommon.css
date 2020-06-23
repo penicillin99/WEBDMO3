@@ -1,0 +1,56 @@
+﻿
+.title-common {
+    color: blue;
+    text-align: center;
+    margin-top : 20px;
+}
+
+.title-back {
+    color: blue;
+    margin-left: 15px;
+}
+
+.title-create {
+    margin-left : 10px;
+}
+
+
+.table-center {
+    text-align : center;
+}
+
+.td-5{
+    width : 5%;
+}
+
+.td-10 {
+    width : 10%;
+}
+
+.td-25 {
+    width : 25%;
+}
+
+.td-40 {
+    width : 40%;
+}
+
+.title-lable {
+    color : green;
+    margin-left : 10px;
+    font-size : 20px;
+}
+
+.note {
+    margin-left : 10px;
+    font-size : 15px;
+}
+
+.button-success {
+    background-color: blue;
+    color: white;
+    border-color: white;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+}

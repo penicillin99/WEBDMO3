@@ -1,0 +1,145 @@
+﻿@model Models.EF.ROOM
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ROOM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EMPLOYER.fullname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPLOYER.fullname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TYPEROOM.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TYPEROOM.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image_link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image_link)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.funcion_1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.funcion_1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.funcion_2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.funcion_2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.personMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personMax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.acreage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.acreage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.allowPet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.allowPet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.createdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.createdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cratedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cratedBy)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

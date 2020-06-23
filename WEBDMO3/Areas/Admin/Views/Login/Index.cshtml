@@ -1,0 +1,56 @@
+﻿
+@model WEBDMO3.Areas.Admin.Models.LoginModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/Areas/Admin/Layout/Login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/Areas/Admin/Layout/Login/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30" . id="login">
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                {
+
+                    <form class="login100-form validate-form" ,@submit="checkForm">
+                        <span class="login100-form-title p-b-55">
+                            Login
+                        </span>
+                        <div class="wrap-input100 validate-input m-b-16" data-validate="Valid email is required: ex@abc.xyz">
+                            @Html.TextBoxFor(model => model.Username, new { @id = "username", @class = "input100", @autofocus = "autofocus", @placeholder = "Username", @maxlength = 20 })
+                        </div>
+                        <div>
+                            @Html.ValidationMessageFor(model => model.Username)
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                            @Html.PasswordFor(model => model.Password, new { @password = "password", @class = "input100", @placeholder = "Password", @maxlength = 10 })
+                        </div>
+                        <div>
+                            @Html.ValidationMessageFor(model => model.Password)
+                        </div>
+
+                        <div class="m-t-10">
+                            @Html.ValidationSummary(true)
+                        </div>
+
+                        <div class="container-login100-form-btn p-t-25">
+                            <button class="login100-form-btn" , type="submit">
+                                Login
+                            </button>
+                        </div>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

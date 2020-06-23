@@ -1,0 +1,148 @@
+﻿@model Models.EF.ROOM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="detail">
+        <h4>Thông tin chi tiết</h4>
+        <hr />
+        <div class="row">
+            <div class="col-lg-offset-0 title-detail">
+                Chủ nhà :
+            </div>
+            <div class="col-lg-2 info-detail">
+                @Html.DisplayFor(model => model.EMPLOYER.fullname)
+            </div>
+            <div class="col-lg-offset-0 title-detail">
+                Loại phòng :
+            </div>
+            <div class="col-lg-3 info-detail">
+                @Html.DisplayFor(model => model.TYPEROOM.name)
+            </div>
+            <div class="col-lg-offset-0 title-detail">
+                Tên phòng :
+            </div>
+            <div class="col-lg-2 info-detail">
+                @Html.DisplayFor(model => model.title)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-offset-0 title-detail">
+                Địa chỉ :
+            </div>
+            <div class="col-lg-2 info-detail">
+                @Html.DisplayFor(model => model.address)
+            </div>
+            <div class="col-lg-2 title-detail">
+                Giá phòng :
+            </div>
+            <div class="col-lg-2 info-detail">
+                @Html.DisplayFor(model => model.price)VNĐ
+            </div>
+            <div class="col-lg-2 title-detail" style="padding-left: 22px">
+                Diện tích :
+            </div>
+            <div class="col-lg-1 info-detail">
+                @Html.DisplayFor(model => model.acreage)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-offset-1 title-detail">
+                Điều hòa :
+            </div>
+            @{
+                if (Model.funcion_1 == true)
+                {
+                    <div class="col-lg-1 info-detail">Có</div>
+                }
+                else
+                {
+                    <div class="col-lg-1 info-detail">Không</div>
+                }
+            }
+            <div class="col-lg-3 title-detail" style="padding-left:75px">
+                Bình nước nóng :
+            </div>
+            @{
+                if (Model.funcion_2 == true)
+                {
+                    <div class="col-lg-1 info-detail">Có</div>
+                }
+                else
+                {
+                    <div class="col-lg-1 info-detail">Không</div>
+                }
+            }
+            <div class="col-lg-offset-1 title-detail" style="padding-left:85px">
+                Số người tối đa :
+            </div>
+            <div class="col-lg-1 info-detail">
+                @Html.DisplayFor(model => model.personMax)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-offset-1 title-detail">
+                Trạng thái :
+            </div>
+            @{
+                if (Model.status == true)
+                {
+                    <div class="col-lg-offset-1 info-detail" style="padding-left : 20px">
+                        Đã cho thuê
+                    </div>
+                }
+                else
+                {
+                    <div class="col-lg-offset-1 info-detail">
+                        Chưa cho thuê
+                    </div>
+                }
+            }
+            <div class="col-lg-offset-1 title-detail" style="padding-left : 40px">
+                Cho phép nuôi thú :
+            </div>
+            @{
+                if (Model.allowPet == true)
+                {
+                    <div class="col-lg-2 info-detail">
+                        Có
+                    </div>
+                }
+                else
+                {
+                    <div class="col-lg-offset-1 info-detail">
+                        Không
+                    </div>
+                }
+            }
+            <div class="col-lg-offset-1 title-detail" style="padding-left:30px">
+                Ngày đăng :
+            </div>
+            @{
+                string[] arrDate = Model.createdate.ToString().Split(' ');
+
+            }
+            <div class="col-lg-2 info-detail">
+                 @arrDate[0]
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-offset-1 title-detail">
+                Mô tả
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 ">
+                @Html.Raw(Model.content)
+            </div>
+        </div>
+
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
